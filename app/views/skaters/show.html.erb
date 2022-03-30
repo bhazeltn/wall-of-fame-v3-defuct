@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @skater %>
+
+<div>
+  <%= link_to "Edit this skater", edit_skater_path(@skater) %> |
+  <%= link_to "Back to skaters", skaters_path %>
+
+  <%= button_to "Destroy this skater", @skater, method: :delete %>
+</div>

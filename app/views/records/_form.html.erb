@@ -1,0 +1,47 @@
+<%= form_with(model: record) do |form| %>
+  <% if record.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(record.errors.count, "error") %> prohibited this record from being saved:</h2>
+
+      <ul>
+        <% record.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :level, style: "display: block" %>
+    <%= form.text_field :level %>
+  </div>
+
+  <div>
+    <%= form.label :segment, style: "display: block" %>
+    <%= form.text_field :segment %>
+  </div>
+
+  <div>
+    <%= form.label :score_type, style: "display: block" %>
+    <%= form.text_field :score_type %>
+  </div>
+
+  <div>
+    <%= form.label :score, style: "display: block" %>
+    <%= form.text_field :score %>
+  </div>
+
+  <div>
+    <%= form.label :competition, style: "display: block" %>
+    <%= form.text_field :competition %>
+  </div>
+
+  <div>
+    <%= form.label :date_achieved, style: "display: block" %>
+    <%= form.date_field :date_achieved %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
