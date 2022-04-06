@@ -4,4 +4,18 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+#   Character.create(name: "Luke", movie: movies.f
+
+require 'csv'
+
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'levels.csv'))
+csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+
+csv.each do |row|
+    l = Level.new
+    l.level = row['Level']
+    l.discipline = row['Discipline']
+    l.age = row['Age']
+    l.save
+    puts "#{l.level} #{l.discipline} #{l.age} saved"
+end

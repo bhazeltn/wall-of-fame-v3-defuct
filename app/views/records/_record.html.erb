@@ -1,7 +1,12 @@
 <div id="<%= dom_id record %>">
   <p>
+    <strong>Skater:</strong>
+    <%= record.skater.name %>
+  </p>
+
+  <p>
     <strong>Level:</strong>
-    <%= record.level %>
+    <%= record.level.name %>
   </p>
 
   <p>
@@ -28,9 +33,5 @@
     <strong>Date achieved:</strong>
     <%= record.date_achieved %>
   </p>
-
-  <p>
-    <strong>Skater</strong>
-    <%= record.skater.name %>
 
 </div>

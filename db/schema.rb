@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_30_220751) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_06_012613) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,14 +20,22 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_30_220751) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "records", force: :cascade do |t|
+  create_table "levels", force: :cascade do |t|
     t.string "level"
+    t.string "discipline"
+    t.string "age"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "records", force: :cascade do |t|
+    t.integer "skater_id"
+    t.integer "level_id"
     t.string "segment"
     t.string "score_type"
     t.float "score"
     t.integer "competition_id"
     t.date "date_achieved"
-    t.integer "skater_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

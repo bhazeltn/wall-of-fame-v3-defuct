@@ -65,6 +65,6 @@ class RecordsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def record_params
-      params.require(:record).permit(:level, :segment, :score_type, :score, :competition, :date_achieved)
+      params.require(:record).permit(:skater_id, :level_id, :segment, :score_type, :score, :competition_id, :date_achieved)
     end
 end
