@@ -20,4 +20,4 @@ I started this project a number of years ago as a Ruby on Rails experiment. I ha
 
 I tried again with Ruby on Rails as a back end and Angular as a front end to try to learn about micro services. I needed more time with Angular before I should have attempted this.
 
-I am restarting the project in Ruby on Rails. I am going to use Test Driven Development to create the project.
+I am restarting the project in Ruby on Rails. Once I have the project completed I will revisit splitting it into smaller chunks in a microservice style approach
